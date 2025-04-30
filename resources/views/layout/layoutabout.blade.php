@@ -6,6 +6,7 @@
     <title>@yield('title', 'Laravel App')</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="style/flowbite.min.css">
+    <link rel="icon" href="image/logo-web.png" type="image/x-icon">
     <script src="style/flowbite.min.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
