@@ -1,4 +1,4 @@
-@extends('layout.gas')
+@extends('layout.layoutlanding')
 
 @section('title', 'landing page')
 @section('page_title', 'Selamat datang di website kami')

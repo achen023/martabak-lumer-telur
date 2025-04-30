@@ -27,9 +27,6 @@
     </main>
 
 <!-- Footer -->
-    <footer class="mt-10 text-center text-sm text-gray-500 py-4 border-t">
-        &copy; {{ date('Y') }} Laravel App. All rights reserved.
-    </footer>
-
+    @include('components.footer')
 </body>
 </html>
