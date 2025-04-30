@@ -12,7 +12,8 @@
             ])
           
 
-@section('page', 'Mengapa martabak lumer telur?')
-@section('page_comand', 'Karena martabak lumer telur adalah brand martabak usaha lokal  premium yang menawarkan pilihan rasa dan varian menarik, ada banyak toping yang wajib kamu coba')  
+@section('page', 'Selamat Datang di martabak lumer telur – Surga Martabak Terlezat!')
+@section('page_comand', 'Kami dengan senang hati menyambut Anda di tempat di mana cita rasa martabak terbaik bertemu dengan pelayanan hangat dan ramah. Dari martabak manis yang legit dengan topping melimpah, hingga martabak telur gurih yang kaya rempah – kami hadir untuk memanjakan lidah Anda.
+Nikmati pengalaman kuliner tak terlupakan, dibuat dari bahan-bahan berkualitas dan resep turun-temurun. Terima kasih telah berkunjung, dan selamat menikmati kelezatan martabak khas kami!')  
 
 @endsection

@@ -2,3 +2,4 @@
 
 @section('title', 'about')
 @section('page_title', 'About us')
+

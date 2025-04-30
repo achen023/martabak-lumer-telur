@@ -15,7 +15,7 @@
 <!-- Main Content -->
     <main class="container mx-auto mt-10 px-4">
         <div class="text-center py-10">
-            <h2 class="text-4xl font-bold mb-4">@yield('page_title',)</h2>
+            <h2 class="text-4xl font-bold mb-6">@yield('page_title',)</h2>
             @yield('content')
             
             <h1 class="mt-8 mb-6 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-2xl dark:text-black">

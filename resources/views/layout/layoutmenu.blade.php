@@ -15,7 +15,7 @@
 <!-- Main Content -->
     <main class="container mx-auto mt-10 px-4">
         <div class="text-center py-10">
-            <h2 class="text-3xl font-bold mb-4">@yield('page_title', 'Menu kami')</h2>
+            <h1 class="text-2xl font-bold mb-6">@yield('page_title', 'Menu kami')</h1>
         </div>
         @yield('content')
     </main>
