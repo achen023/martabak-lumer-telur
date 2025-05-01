@@ -30,25 +30,29 @@
     </iframe>
   </div>
 
-  <button class="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg mb-10">
-   Hubungi kami
-  </button>
+  <div class="flex justify-center my-10">
+    <button class="flex items-center gap-x-2 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md">
+      <img src="/image/wa.png" alt="WhatsApp" class="w-8 h-8" />
+       hubungi kami
+    </button>
+  </div>
+
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-left">
     <div class="flex flex-col items-center">
-      <div class="text-3xl mb-2">📞</div>
+      <div class="text-3xl mb-2"><img src="/image/aod.png" alt=""></div>
       <p class="font-semibold">Phone:</p>
-      <p class="text-gray-600">+62 812-XXXX-XXXX</p>
+      <p class="text-gray-600">+62 895-6005-50241</p>
     </div>
     <div class="flex flex-col items-center">
-      <div class="text-3xl mb-2">📍</div>
+      <div class="text-3xl mb-2"><img src="/image/location_on.png" alt=""></div>
       <p class="font-semibold">Address:</p>
-      <p class="text-gray-600 text-center">Jl. Contoh Alamat No.123, Kota, Indonesia</p>
+      <p class="text-gray-600 text-center">Jl. Contoh Batu Besar MTC, Batam, Indonesia</p>
     </div>
     <div class="flex flex-col items-center">
-      <div class="text-3xl mb-2">✉️</div>
+      <div class="text-3xl mb-2"><img src="/image/mail.png" alt=""></div>
       <p class="font-semibold">Email:</p>
-      <p class="text-gray-600">info@example.com</p>
+      <p class="text-gray-600">setyapramudiya18@gmail.com</p>
     </div>
   </div>
 </section>
