@@ -35,3 +35,7 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
 Route::post('/produk', [ProdukController::class, 'store'])->name('produk.store');
+
+Route::put('/produk/update', [ProdukController::class, 'update'])->name('produk.update');
+
+Route::delete('/produk/hapus', [ProdukController::class, 'destroy'])->name('produk.hapus');

@@ -50,9 +50,26 @@
                     Martabak dengan isi kacang berbalur 
                 </td>
                 <td class="px-6 py-4 text-right">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                <a href="#" 
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline edit-btn"
+                    data-id="1"
+                    data-nama="Martabak manis kacang"
+                    data-kategori="Martabak manis"
+                    data-deskripsi="Martabak dengan isi kacang berbalur"
+                    data-foto="martabak1.jpg"
+                    data-modal-target="editProdukModal"
+                    data-modal-toggle="editProdukModal">
+                    Edit
+                    </a>
                     <br>
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Hapus</a>
+                    <a href="#" 
+                    class="font-medium text-red-600 dark:text-red-500 hover:underline delete-btn"
+                    data-id="1"
+                    data-nama="Martabak manis kacang"
+                    data-modal-target="hapusProdukModal"
+                    data-modal-toggle="hapusProdukModal">
+                    Hapus
+                    </a>
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
@@ -68,14 +85,31 @@
                 <td class="px-6 py-4">
                     Martabak manis
                 </td>
-                </td>
                 <td class="px-6 py-4">
                     Martabak dengan parutan keju
                 </td>
                 <td class="px-6 py-4 text-right">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                <a href="#" 
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline edit-btn"
+                    data-id="1"
+                    data-nama="Martabak manis kacang"
+                    data-kategori="Martabak manis"
+                    data-deskripsi="Martabak dengan isi kacang berbalur"
+                    data-foto="martabak1.jpg"
+                    data-modal-target="editProdukModal"
+                    data-modal-toggle="editProdukModal">
+                    Edit
+                    </a>
                     <br>
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Hapus</a>
+                    <a href="#" 
+                    class="font-medium text-red-600 dark:text-red-500 hover:underline delete-btn"
+                    data-id="1"
+                    data-nama="Martabak manis kacang"
+                    data-modal-target="hapusProdukModal"
+                    data-modal-toggle="hapusProdukModal">
+                    Hapus
+                    </a>
+
                 </td>
             </tr>
             <tr class="bg-white dark:bg-gray-800">
@@ -95,12 +129,67 @@
                     Martabak telur dengan extra toping daging
                 </td>
                 <td class="px-6 py-4 text-right">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                <a href="#" 
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline edit-btn"
+                    data-id="1"
+                    data-nama="Martabak manis kacang"
+                    data-kategori="Martabak manis"
+                    data-deskripsi="Martabak dengan isi kacang berbalur"
+                    data-foto="martabak1.jpg"
+                    data-modal-target="editProdukModal"
+                    data-modal-toggle="editProdukModal">
+                    Edit
+                    </a>
                     <br>
-                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Hapus</a>
+                <a href="#" 
+                    class="font-medium text-red-600 dark:text-red-500 hover:underline delete-btn"
+                    data-id="1"
+                    data-nama="Martabak manis kacang"
+                    data-modal-target="hapusProdukModal"
+                    data-modal-toggle="hapusProdukModal">
+                    Hapus
+                    </a>
                 </td>
-                
             </tr>
+                    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const editButtons = document.querySelectorAll('.edit-btn');
+        editButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                document.getElementById('edit-id').value = this.dataset.id;
+                document.getElementById('edit-nama').value = this.dataset.nama;
+                document.getElementById('edit-kategori').value = this.dataset.kategori;
+                document.getElementById('edit-deskripsi').value = this.dataset.deskripsi;
+            });
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const id = this.dataset.id;
+                const nama = this.dataset.nama;
+                
+                document.getElementById('hapus-id').value = id;
+                document.getElementById('confirm-nama').innerText = nama;
+                
+                document.getElementById('hapusProdukModal').classList.remove('hidden');
+            });
+        });
+
+        const cancelButton = document.querySelector('[data-modal-toggle="hapusProdukModal"]');
+        if (cancelButton) {
+            cancelButton.addEventListener('click', function () {
+                document.getElementById('hapusProdukModal').classList.add('hidden');
+            });
+        }
+    });
+</script>
+@include('components.editproduk-modal')
+@include('components.hapusproduk-modal')
         </tbody>
     </table>
 </div>
