@@ -17,7 +17,7 @@
 
     <!-- Card 2 -->
     <div class="max-w-sm bg-yellow-500 border border-gray-200 rounded-lg shadow-sm dark:bg-orange-600 dark:border-gray-70">
-        <a href="detail">
+        <a href="/detail">
             <img class="rounded-t-lg" src="{{ $imgsrc }}" alt="" />
         </a>
         <div class="p-5">
