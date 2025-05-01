@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
-class userController extends Controller
+class UserController extends Controller
 {
-    function show() {
-
-        return view('pages.user');
-    }
+    public function index()
+{
+    $users = User::all();
+    return view('pages.user', compact('users'));
+}
 }

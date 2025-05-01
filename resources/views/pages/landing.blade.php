@@ -6,7 +6,11 @@
 @section('content')
 
             @include('components.carousel', [
-                'imgsrc' => 'image/martabak1.jpg',
+                'imgsrc1' => 'image/martabak1.jpg',
+                'imgsrc2' => 'image/martabak_coklatkeju.jpg',
+                'imgsrc3' => 'image/martabaktelur (2).jpg',
+                'imgsrc4' => 'image/martabak mage.jpg',
+                'imgsrc5' => 'image/martabak7.jpg',
                 'title' => 'Gonggong goreng Tepung mak Limah',
                 
             ])
