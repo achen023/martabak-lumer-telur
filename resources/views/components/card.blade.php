@@ -1,7 +1,7 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
     <!-- Card 1 -->
     <div class="max-w-sm bg-yellow-500 border border-gray-200 rounded-lg shadow-sm dark:bg-orange-600 dark:border-gray-70">
-        <a href="/landing">
+        <a href="/detail">
             <img class="rounded-t-lg" src="{{ $imgsrc }}" alt="" />
         </a>
         <div class="p-5">
@@ -17,7 +17,7 @@
 
     <!-- Card 2 -->
     <div class="max-w-sm bg-yellow-500 border border-gray-200 rounded-lg shadow-sm dark:bg-orange-600 dark:border-gray-70">
-        <a href="#">
+        <a href="detail">
             <img class="rounded-t-lg" src="{{ $imgsrc }}" alt="" />
         </a>
         <div class="p-5">
@@ -36,7 +36,7 @@
 
     <!-- Card 3 -->
     <div class="max-w-sm bg-yellow-500 border border-gray-200 rounded-lg shadow-sm dark:bg-orange-600 dark:border-gray-70">
-        <a href="#">
+        <a href="/detail">
             <img class="rounded-t-lg" src="{{ $imgsrc }}" alt="" />
         </a>
         <div class="p-5">
@@ -51,6 +51,7 @@
                 </svg>
             </a>
         </div>
+        </a>
     </div>
 </div>
 <div class="mt-8 mb-6  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
