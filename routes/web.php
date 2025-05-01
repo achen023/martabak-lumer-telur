@@ -1,27 +1,34 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;  // Pastikan nama controller sesuai
-use App\Http\Controllers\LandingController;
-use App\Http\Controllers\MenuController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\landingController;
+use App\Http\Controllers\menuController;
+use App\Http\Controllers\aboutController;
+use App\Http\Controllers\detailController;
+use App\Http\Controllers\contactController;
+use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\productController;
+use App\Http\Controllers\userController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
 
+Route::get('/', function () {
+    return view('pages.landing');
+});
 
-// Menghapus route pertama yang menuju 'welcome'
-Route::get('/', [HomeController::class, 'index'])->name('home');  // Menjadikan HomeController sebagai halaman utama
+Route::get('/home', [homeController::class, 'show']);
+Route::get('/landing', [landingController::class, 'show']);
+Route::get('/menu', [menuController::class, 'show']);
+Route::get('/about', [aboutController::class, 'show']);
+Route::get('/detail', [detailController::class, 'show']);
+Route::get('/dashboard', [dashboardController::class, 'show']);
+Route::get('/product', [productController::class, 'show']);
+Route::get('/user', [userController::class, 'show']);
+Route::get('/contact', [contactController::class, 'show']);
 
-Route::get('/home', [HomeController::class, 'show']);  // Jika Anda masih membutuhkan route ini
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
 
-Route::get('/landing', [LandingController::class, 'show']);
-
-Route::get('/menu', [MenuController::class, 'show']);
-
-Route::get('/produk', [ProductController::class, 'index'])->name('product.index');
-
-Route::post('/produk', [ProductController::class, 'store'])->name('produk.store');
-
-Route::get('/user', [UserController::class, 'index'])->name('user.index');
-
-Route::put('/produk/{id}', [ProductController::class, 'update'])->name('produk.update');
-
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
