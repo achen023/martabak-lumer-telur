@@ -12,6 +12,7 @@ use App\Http\Controllers\productController;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\AdminController;
 
 Route::get('/', function () {
     return view('pages.landing');
@@ -32,6 +33,9 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
+
+Route::get('/admin', [AdminController::class, 'showAdminForm'])->name('admin');
+Route::post('/admin', [AdminController::class, 'admin']);
 
 Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
 Route::post('/produk', [ProdukController::class, 'store'])->name('produk.store');
