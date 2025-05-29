@@ -2,5 +2,5 @@
 
 @section('title', 'register')
 @section('content')
-    @include('components.form-regist')
+    @include('components.form_regist')
 @endsection

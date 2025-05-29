@@ -3,5 +3,5 @@
 @section('title', 'Dashboard Admin')
 
 @section('content')
-    @include('components.table-user')
+    @include('components.table_user')
 @endsection
