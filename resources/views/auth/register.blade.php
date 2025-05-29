@@ -1,5 +1,5 @@
 @extends('layout.layoutlogin')
 
 @section('content')
-    @include('components.form-regist')
+    @include('components.form_regist')
 @endsection

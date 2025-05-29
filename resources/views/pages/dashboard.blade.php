@@ -3,6 +3,6 @@
 @section('title', 'Dashboard Admin')
 
 @section('content')
-    @include('components.table-produk')
+    @include('components.table_produk')
 @endsection
 

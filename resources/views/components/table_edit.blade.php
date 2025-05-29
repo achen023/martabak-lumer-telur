@@ -8,7 +8,7 @@
     <button data-modal-target="tambahProdukModal" data-modal-toggle="tambahProdukModal" class="block text-white bg-yellow-400 hover:bg-yellow-500 font-bold rounded-lg text-sm px-5 py-2.5 text-center" type="button">
     Tambah Produk
     </button>
-    @include('components.modal-produk')
+    @include('components.modal_produk')
         </caption>
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -188,8 +188,8 @@
         }
     });
 </script>
-@include('components.editproduk-modal')
-@include('components.hapusproduk-modal')
+@include('components.editproduk_modal')
+@include('components.hapusproduk_modal')
         </tbody>
     </table>
 </div>

@@ -14,9 +14,9 @@
     Tambah Produk
 </button>
 </div>
-@include('components.modal-produk')
+@include('components.modal_produk')
 
-@include('components.editproduk-modal')
+@include('components.editproduk_modal')
     <table class="w-full table-auto border-collapse border border-gray-300">
         <thead class="bg-gray-100">
             <tr>
