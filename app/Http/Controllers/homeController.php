@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use illuminate\View\View;
 
 
-class homeController extends Controller
+class HomeController extends Controller
 {
     function show() {
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use illuminate\View\View;
 
-class landingController extends Controller
+class LandingController extends Controller
 {
     function show() {
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use illuminate\View\View;
 
-class menuController extends Controller
+class MenuController extends Controller
 {
     function show() {
 
