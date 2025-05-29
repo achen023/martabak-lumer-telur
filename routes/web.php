@@ -1,15 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\homeController;
-use App\Http\Controllers\landingController;
-use App\Http\Controllers\menuController;
-use App\Http\Controllers\aboutController;
-use App\Http\Controllers\detailController;
-use App\Http\Controllers\contactController;
-use App\Http\Controllers\dashboardController;
-use App\Http\Controllers\productController;
-use App\Http\Controllers\userController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\DetailController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\AdminController;
@@ -18,15 +18,15 @@ Route::get('/', function () {
     return view('pages.landing');
 });
 
-Route::get('/home', [homeController::class, 'show']);
-Route::get('/landing', [landingController::class, 'show']);
-Route::get('/menu', [menuController::class, 'show']);
-Route::get('/about', [aboutController::class, 'show']);
-Route::get('/detail', [detailController::class, 'show']);
-Route::get('/dashboard', [dashboardController::class, 'show']);
-Route::get('/product', [productController::class, 'show']);
-Route::get('/user', [userController::class, 'show']);
-Route::get('/contact', [contactController::class, 'show']);
+Route::get('/home', [HomeController::class, 'show']);
+Route::get('/landing', [LandingController::class, 'show']);
+Route::get('/menu', [MenuController::class, 'show']);
+Route::get('/about', [AboutController::class, 'show']);
+Route::get('/detail', [DetailController::class, 'show']);
+Route::get('/dashboard', [DashboardController::class, 'show']);
+Route::get('/product', [ProductController::class, 'show']);
+Route::get('/user', [UserController::class, 'show']);
+Route::get('/contact', [ContactController::class, 'show']);
 
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);

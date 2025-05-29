@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use illuminate\View\View;
 
-class contactController extends Controller
+class ContactController extends Controller
 {
     function show() {
 
