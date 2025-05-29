@@ -7,7 +7,7 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function index()
+    public function show()
 {
     $users = User::all();
     return view('pages.user', compact('users'));
