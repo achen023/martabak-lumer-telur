@@ -1,8 +1,10 @@
-@extends('layout.layoutmenu')
+@extends('layout.layoutlanding')
 @section('title', 'menu')
 
-@section('content')
+@section('content2')
 
+<h1 class="text-4xl text-center mr-4 font-bold mb-8">Menu kami</h1>
+<div class="container mx-auto px-8 py-2">
     @include('components.card', [
         'imgsrc1' => 'image/martabak3.jpg',
         'imgsrc2' => 'image/martabakmanis.jpg',
@@ -23,4 +25,5 @@
         'desc5' => 'Martabak telur',
         'desc6' => 'Martabak telur',
     ])
+</div>
 @endsection

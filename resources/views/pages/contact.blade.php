@@ -19,10 +19,10 @@
   </div>
 
   <div class="flex justify-center my-10">
-    <button class="flex items-center gap-x-2 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md">
+    <a href="https://wa.me/nomor_kamu" class="flex items-center gap-x-2 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md">
       <img src="/image/wa.png" alt="WhatsApp" class="w-8 h-8" />
-       hubungi kami
-    </button>
+      hubungi kami
+    </a>
   </div>
 
 
