@@ -3,7 +3,7 @@
     <div class="relative w-full max-w-md max-h-full">
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 p-6">
             <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Edit Produk</h3>
-            <form id="formEditProduk" action="{{ route('produk.update') }}" method="POST" enctype="multipart/form-data">
+            <form id="formEditProduk" action="" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <input type="hidden" name="id" id="edit-id">

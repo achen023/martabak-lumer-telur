@@ -2,5 +2,5 @@
 
 @section('title', 'admin login')
 @section('content')
-    @include('components.form-admin')
+    @include('components.form_admin')
 @endsection

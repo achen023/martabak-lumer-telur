@@ -1,4 +1,5 @@
-<form class="max-w-sm mx-auto space-y-4">
+<form class="max-w-sm mx-auto space-y-4" action="{{ route('login-proses') }}" method="post">
+  @csrf
 <h2 class="text-2xl font-bold text-gray-900">Sign in to your account</h2>
     <p class="text-sm text-gray-600">
         Join as a UMKM partner and manage your martabak business with ease.
@@ -8,12 +9,17 @@
     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
     <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
   </div>
+  @error('email')
+  <small>{{$message}}</small>
+  @enderror
 
   <div>
     <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
     <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
   </div>
-
+  @error('password')
+    <small>{{$message}}</small>
+  @enderror
   <div class="flex justify-between">
     <div class="flex items-start">
       <div class="flex items-center h-5">
@@ -29,7 +35,13 @@
     </div>
 
     <p class="text-sm text-center text-gray-600">
-    Not registered? <a href="/register" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+    Not registered? <a href="{{ route('register') }}" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
     </p>
 </form>
+
+@if($message = Session::get('failed'))
+    <script>
+        Swal.fire('{{ $message }}}');
+    </script>
+@endif
  

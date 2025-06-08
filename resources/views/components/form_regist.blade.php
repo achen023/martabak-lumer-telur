@@ -1,5 +1,6 @@
 
-<form class="max-w-sm mx-auto space-y-3" action="#" method="POST">
+<form class="max-w-sm mx-auto space-y-3" action="{{ route('register-proses') }}" method="POST">
+    @csrf
     <h2 class="text-2xl font-bold text-gray-900">Create an account</h2>
     <p class="text-sm text-gray-600">
         Join as a UMKM partner and manage your martabak business with ease.
@@ -7,8 +8,8 @@
     </p>
 
     <div>
-        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
-        <input type="text" id="username" name="username" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b7a314] focus:ring-[#b7a314] sm:text-sm" />
+        <label for="name" class="block text-sm font-medium text-gray-700">Username</label>
+        <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#b7a314] focus:ring-[#b7a314] sm:text-sm" />
     </div>
 
     <div>

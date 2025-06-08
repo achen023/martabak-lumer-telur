@@ -14,7 +14,7 @@
 
             <!-- Modal Body -->
             <div class="p-6 space-y-6">
-                <form action="{{ route('produk.store') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
+                <form action="" method="POST" enctype="multipart/form-data" class="space-y-4">
                     @csrf
 
                     <div>

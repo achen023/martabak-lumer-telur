@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+
 
 class LoginController extends Controller
 {
@@ -13,30 +16,60 @@ class LoginController extends Controller
         return view('auth.login');
     }
 
-    public function login(Request $request)
-    {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|string',
+    public function login_proses(Request $request) {
+        $request->validate([
+            'email'     => 'required',
+            'password'  => 'required',
         ]);
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect('/home'); // atau dashboard kamu
+        $data = [
+            'email'     => $request->email,
+            'password'  => $request->password,
+        ];
+
+        if(Auth::attempt($data)) {
+            return redirect()->route('landing');
+        }else{
+            return redirect()->route('login')->with('failed', 'email atau password salah');
         }
-
-        return back()->withErrors([
-            'email' => 'Email atau password salah.',
-        ]);
     }
 
-    public function logout(Request $request)
-    {
+    public function logout() {
         Auth::logout();
+        return redirect()->route('login')->with('success','kamu berhasil logout');
+    }
 
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
+    public function register() {
+        return view('auth.register');
+    }
 
-        return redirect('/login');
+    public function register_proses(Request $request) { 
+        $request->validate([
+            'name'  => 'required',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:6'
+        ]);
+
+        $data['name'] = $request->name;
+        $data['email'] = $request->email;
+        $data['password'] = Hash::make($request->password);
+
+        User::create($data);
+
+        $login = [
+            'email'  => $request->email,
+            'password' => $request->password
+        ];
+
+         $login = [
+            'email'     => $request->email,
+            'password'  => $request->password,
+        ];
+
+        if(Auth::attempt($data)) {
+            return redirect()->route('landing');
+        }else{
+            return redirect()->route('login')->with('failed', 'email atau password salah');
+        }
     }
 }

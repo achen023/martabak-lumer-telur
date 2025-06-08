@@ -6,7 +6,7 @@
             <p id="confirm-text" class="mb-4">
                 Apakah kamu yakin ingin menghapus produk <strong id="confirm-nama">Martabak manis kacang</strong>?
             </p>
-            <form id="formHapusProduk" action="{{ route('produk.hapus') }}" method="POST">
+            <form id="formHapusProduk" action="" method="POST">
                 @csrf
                 @method('DELETE')
                 <input type="hidden" name="id" id="hapus-id">
