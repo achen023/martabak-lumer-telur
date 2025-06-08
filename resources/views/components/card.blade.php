@@ -1,4 +1,4 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ml-6">
     <!-- Card 1 -->
     <div class="max-w-sm bg-yellow-500 border border-gray-200 rounded-lg shadow-sm dark:bg-orange-600 dark:border-gray-70">
         <a href="/detail">
@@ -48,7 +48,7 @@
         </a>
     </div>
 </div>
-<div class="mt-8 mb-6  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="mt-8 mb-6  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ml-6">
     <!-- Card 4 -->
     <div class="max-w-sm bg-yellow-500 border border-gray-200 rounded-lg shadow-sm dark:bg-orange-600 dark:border-gray-70">
         <a href="#">
