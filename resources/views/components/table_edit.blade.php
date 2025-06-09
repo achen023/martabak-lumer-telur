@@ -33,125 +33,49 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    1
-                </th>
-                <td class="px-6 py-4">
-                    Martabak manis kacang
-                </td>
-                <td class="px-6 py-4">
-                    <img src="image/martabak1.jpg" alt="" class="w-24 h-24 object-cover rounded">
-                </td>
-                <td class="px-6 py-4">
-                    Martabak manis
-                </td>
-                <td class="px-6 py-4">
-                    Martabak dengan isi kacang berbalur 
-                </td>
-                <td class="px-6 py-4 text-right">
+            @foreach ($produks as $index => $produk)
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{ $index + 1 }}
+            </th>
+            <td class="px-6 py-4">
+                {{ $produk->nama }}
+            </td>
+            <td class="px-6 py-4">
+                <img src="{{ asset('uploads/' . $produk->foto) }}" alt="{{ $produk->nama }}" class="w-24 h-24 object-cover rounded">
+            </td>
+            <td class="px-6 py-4">
+                {{ $produk->kategori }}
+            </td>
+            <td class="px-6 py-4">
+                {{ $produk->deskripsi }}
+            </td>
+            <td class="px-6 py-4 text-right">
                 <a href="#" 
                     class="font-medium text-blue-600 dark:text-blue-500 hover:underline edit-btn"
-                    data-id="1"
-                    data-nama="Martabak manis kacang"
-                    data-kategori="Martabak manis"
-                    data-deskripsi="Martabak dengan isi kacang berbalur"
-                    data-foto="martabak1.jpg"
+                    data-id="{{ $produk->id }}"
+                    data-nama="{{ $produk->nama }}"
+                    data-kategori="{{ $produk->kategori }}"
+                    data-deskripsi="{{ $produk->deskripsi }}"
+                    data-foto="{{ $produk->foto }}"
                     data-modal-target="editProdukModal"
                     data-modal-toggle="editProdukModal">
                     Edit
-                    </a>
-                    <br>
-                    <a href="#" 
+                </a>
+                <br>
+                <a href="#" 
                     class="font-medium text-red-600 dark:text-red-500 hover:underline delete-btn"
-                    data-id="1"
-                    data-nama="Martabak manis kacang"
+                    data-id="{{ $produk->id }}"
+                    data-nama="{{ $produk->nama }}"
                     data-modal-target="hapusProdukModal"
                     data-modal-toggle="hapusProdukModal">
                     Hapus
-                    </a>
-                </td>
-            </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    2
-                </th>
-                <td class="px-6 py-4">
-                    Martabak Keju
-                </td>
-                <td class="px-6 py-4">
-                    <img src="image/martabak4.jpg" alt="" class="w-24 h-24 object-cover rounded">
-                </td>
-                <td class="px-6 py-4">
-                    Martabak manis
-                </td>
-                <td class="px-6 py-4">
-                    Martabak dengan parutan keju
-                </td>
-                <td class="px-6 py-4 text-right">
-                <a href="#" 
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline edit-btn"
-                    data-id="1"
-                    data-nama="Martabak manis kacang"
-                    data-kategori="Martabak manis"
-                    data-deskripsi="Martabak dengan isi kacang berbalur"
-                    data-foto="martabak1.jpg"
-                    data-modal-target="editProdukModal"
-                    data-modal-toggle="editProdukModal">
-                    Edit
-                    </a>
-                    <br>
-                    <a href="#" 
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline delete-btn"
-                    data-id="1"
-                    data-nama="Martabak manis kacang"
-                    data-modal-target="hapusProdukModal"
-                    data-modal-toggle="hapusProdukModal">
-                    Hapus
-                    </a>
-
-                </td>
-            </tr>
-            <tr class="bg-white dark:bg-gray-800">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    3
-                </th>
-                <td class="px-6 py-4">
-                    Martabak telur special
-                </td>
-                <td class="px-6 py-4">
-                    <img src="image/martabak2.jpg" alt="" class="w-24 h-24 object-cover rounded">
-                </td>
-                <td class="px-6 py-4">
-                    Martabak telur 
-                </td>
-                <td class="px-6 py-4">
-                    Martabak telur dengan extra toping daging
-                </td>
-                <td class="px-6 py-4 text-right">
-                <a href="#" 
-                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline edit-btn"
-                    data-id="1"
-                    data-nama="Martabak manis kacang"
-                    data-kategori="Martabak manis"
-                    data-deskripsi="Martabak dengan isi kacang berbalur"
-                    data-foto="martabak1.jpg"
-                    data-modal-target="editProdukModal"
-                    data-modal-toggle="editProdukModal">
-                    Edit
-                    </a>
-                    <br>
-                <a href="#" 
-                    class="font-medium text-red-600 dark:text-red-500 hover:underline delete-btn"
-                    data-id="1"
-                    data-nama="Martabak manis kacang"
-                    data-modal-target="hapusProdukModal"
-                    data-modal-toggle="hapusProdukModal">
-                    Hapus
-                    </a>
-                </td>
-            </tr>
-                    <script>
+                </a>
+            </td>
+        </tr>
+    @endforeach
+    
+     <script>
     document.addEventListener('DOMContentLoaded', function () {
         const editButtons = document.querySelectorAll('.edit-btn');
         editButtons.forEach(button => {
@@ -190,6 +114,6 @@
 </script>
 @include('components.editproduk_modal')
 @include('components.hapusproduk_modal')
-        </tbody>
+</tbody>
     </table>
 </div>

@@ -10,6 +10,7 @@ use App\Http\Controllers\DetailController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
@@ -36,7 +37,8 @@ Route::post('/logout',[LoginController::class, 'logout'])->name('logout');
 
 Route::middleware('auth.admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'show'])->name('dashboard');
-    Route::get('/product', [ProductController::class, 'show']);
+    Route::resource('/product', ProductController::class);
+    Route::get('/product', [ProductController::class, 'index'])->name('product.index');
     Route::get('/user', [UserController::class, 'show']);
 });
 
@@ -44,3 +46,5 @@ Route::get('/admin', [AdminController::class, 'admin_login'])->name('admin');
 Route::post('/admin-proses', [AdminController::class, 'admin_proses'])->name('admin-proses');
 Route::post('/admin-logout', [AdminController::class, 'admin_logout'])->name('admin-logout');
 
+Route::resource('/produk', ProdukController::class);
+Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');

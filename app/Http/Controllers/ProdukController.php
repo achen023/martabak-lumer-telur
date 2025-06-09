@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produk; // Impor model Produk
+use App\Models\Produk;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ProdukController extends Controller
 {
-   public function index()
+    public function index()
     {
         $produks = Produk::all();
-        return view('pages.product', compact('produks'));
+        return view('produk.index', compact('produks'));
     }
 
     public function store(Request $request)

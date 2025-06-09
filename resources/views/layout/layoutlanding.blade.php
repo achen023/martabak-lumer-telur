@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="style/flowbite.min.css">
     <link rel="icon" href="image/logo-web.png" type="image/x-icon">
     <script src="style/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 <!-- Navbar -->
     @include('components.megamenu')
     
 <!-- Main Content -->
-    <main class="w-full mt-10 px-4">
-        <div class="text-center py-10">
-            <h2 class="text-4xl font-bold mb-6">@yield('page_title',)</h2>
+    <main class="w-full px-4">
+        <div class="text-center ">
+            <h2 class="text-4xl font-bold mb-6 mt-6">@yield('page_title',)</h2>
             @yield('content')
         </div>
     <div class="bg-gray-50 py-8">
