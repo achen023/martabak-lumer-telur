@@ -36,10 +36,26 @@ class ProductController extends Controller
         return redirect()->back()->with('success', 'Produk berhasil ditambahkan.');
     }
 
-    public function update(Request $request, Produk $produk)
-    {
-        // (sama seperti store, tambahkan validasi dan logika update)
+  public function update(Request $request, $id)
+{
+    $produk = Produk::findOrFail($id);
+
+    $produk->nama = $request->nama;
+    $produk->deskripsi = $request->deskripsi;
+    $produk->kategori = $request->kategori;
+
+    if ($request->hasFile('foto')) {
+        $file = $request->file('foto');
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('uploads'), $filename);
+        $produk->foto = $filename;
     }
+
+    $produk->save();
+
+    return redirect()->back()->with('success', 'Produk berhasil diperbarui.');
+}
+
 
     public function destroy(Produk $produk)
     {
