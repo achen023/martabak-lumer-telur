@@ -99,4 +99,8 @@
             });
         }
     });
+<<<<<<< HEAD
 </script>
+=======
+</script>
+>>>>>>> ec47a4b19af5a5bcf832c8daaf41dfc1bfb85c5e
