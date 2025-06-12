@@ -39,6 +39,7 @@ Route::middleware('auth.admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'show'])->name('dashboard');
     Route::resource('/product', ProductController::class);
     Route::get('/product', [ProductController::class, 'index'])->name('product.index');
+    Route::put('/product/{id}', [ProductController::class, 'update'])->name('product.update');
     Route::get('/user', [UserController::class, 'show']);
 });
 
