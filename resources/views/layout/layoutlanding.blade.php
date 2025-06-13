@@ -23,7 +23,6 @@
         </div>
     <div class="bg-gray-50 py-8">
         <div class="container mx-auto px-4  rounded-lg">
-            
             @yield('content2')
         </div>
     </div>

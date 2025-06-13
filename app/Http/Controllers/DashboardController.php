@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    function show() {
-
-        return view('pages.dashboard');
+    public function show()
+    {
+        $produks = \App\Models\Produk::all();
+        return view('pages.dashboard', compact('produks'));
     }
+
 }

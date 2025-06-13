@@ -16,12 +16,11 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/', function () {
-    return view('pages.landing');
-});
+Route::get('/', [LandingController::class, 'landing']);
+
 
 Route::get('/home', [HomeController::class, 'show']);
-Route::get('/landing', [LandingController::class, 'show'])->name('landing');
+Route::get('/landing', [LandingController::class, 'landing'])->name('landing');
 Route::get('/menu', [MenuController::class, 'show']);
 Route::get('/about', [AboutController::class, 'show']);
 Route::get('/detail', [DetailController::class, 'show']);
@@ -49,3 +48,4 @@ Route::post('/admin-logout', [AdminController::class, 'admin_logout'])->name('ad
 
 Route::resource('/produk', ProdukController::class);
 Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
+Route::get('/detail/{id}', [ProdukController::class, 'show'])->name('produk.detail');

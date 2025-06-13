@@ -32,8 +32,13 @@
                         <select id="kategori" name="kategori" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5">
                             <option value="Martabak Manis">Martabak Manis</option>
                             <option value="Martabak Telor">Martabak Telor</option>
-                            <!-- Tambah kategori lain sesuai kebutuhan -->
                         </select>
+                    </div>
+
+                    <!-- ✅ Input Harga -->
+                    <div>
+                        <label for="harga" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga (Rp)</label>
+                        <input type="number" name="harga" id="harga" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5" required>
                     </div>
 
                     <div>

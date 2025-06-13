@@ -12,7 +12,6 @@
                 'imgsrc3' => 'image/martabaktelur (2).jpg',
                 'imgsrc4' => 'image/martabak mage.jpg',
                 'imgsrc5' => 'image/martabak7.jpg',
-                'title' => 'Gonggong goreng Tepung mak Limah',
                 
             ])
             
@@ -22,26 +21,8 @@
 @section('content2')
             <h1 class="text-2xl text-center mr-4 font-bold mb-6">MENU KAMI</h1>
             <div class="justify-center my-10">
-                    @include('components.card', [
-                'imgsrc1' => 'image/martabak3.jpg',
-                'imgsrc2' => 'image/martabakmanis.jpg',
-                'imgsrc3' => 'image/pandankeju.jpg',
-                'imgsrc4' => 'image/martabak2.jpg',
-                'imgsrc5' => 'image/Telurspesial (3).jpg',
-                'imgsrc6' => 'image/telursosis.jpg',
-                'title1' => 'Martabak coklat keju',
-                'title2' => 'Martabak coklat',
-                'title3' => 'Martabak pandan coklat keju',
-                'title4' => 'Martabak telur jumbo',
-                'title5' => 'Martabak telur puyuh',
-                'title6' => 'Martabak telur sosis',
-                'desc1' => 'Martabak manis',
-                'desc2' => 'Martabak manis',
-                'desc3' => 'Martabak manis',
-                'desc4' => 'Martabak telur',
-                'desc5' => 'Martabak telur',
-                'desc6' => 'Martabak telur',
-            ])
+                    @include('components.card', ['produks' => $produks])
+
             <div class="flex justify-center my-10">
                 <a href="/menu" class="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm py-4 px-8  dark:bg-yellow-600 dark:hover:bg-yellow-700 focus:outline-none dark:focus:ring-yellow-800">
                     Menu selengkapnya

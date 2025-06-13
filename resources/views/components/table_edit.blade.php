@@ -17,48 +17,51 @@
                 <th scope="col" class="px-6 py-3">Nama</th>
                 <th scope="col" class="px-6 py-3">Foto Produk</th>
                 <th scope="col" class="px-6 py-3">Kategori</th>
+                <th scope="col" class="px-6 py-3">Harga</th>
                 <th scope="col" class="px-6 py-3">Deskripsi</th>
                 <th scope="col" class="px-6 py-3 text-right">Aksi</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($produks as $index => $produk)
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        {{ $index + 1 }}
-                    </th>
-                    <td class="px-6 py-4">{{ $produk->nama }}</td>
-                    <td class="px-6 py-4">
-                        <img src="{{ asset('uploads/' . $produk->foto) }}" alt="{{ $produk->nama }}"
-                            class="w-24 h-24 object-cover rounded">
-                    </td>
-                    <td class="px-6 py-4">{{ $produk->kategori }}</td>
-                    <td class="px-6 py-4">{{ $produk->deskripsi }}</td>
-                    <td class="px-6 py-4 text-right">
-                        <a href="#"
-                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline edit-btn"
-                            data-id="{{ $produk->id }}"
-                            data-nama="{{ $produk->nama }}"
-                            data-kategori="{{ $produk->kategori }}"
-                            data-deskripsi="{{ $produk->deskripsi }}"
-                            data-foto="{{ $produk->foto }}"
-                            data-modal-target="editProdukModal"
-                            data-modal-toggle="editProdukModal">
-                            Edit
-                        </a>
-                        <br>
-                        <a href="#"
-                            class="font-medium text-red-600 dark:text-red-500 hover:underline delete-btn"
-                            data-id="{{ $produk->id }}"
-                            data-nama="{{ $produk->nama }}"
-                            data-modal-target="hapusProdukModal"
-                            data-modal-toggle="hapusProdukModal">
-                            Hapus
-                        </a>
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
+    @foreach ($produks as $index => $produk)
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{ $index + 1 }}
+            </th>
+            <td class="px-6 py-4">{{ $produk->nama }}</td>
+            <td class="px-6 py-4">
+                <img src="{{ asset('uploads/' . $produk->foto) }}" alt="{{ $produk->nama }}"
+                    class="w-24 h-24 object-cover rounded">
+            </td>
+            <td class="px-6 py-4">{{ $produk->kategori }}</td>
+            <td class="px-6 py-4">Rp {{ number_format($produk->harga, 0, ',', '.') }}</td> <!-- Harga -->
+            <td class="px-6 py-4">{{ $produk->deskripsi }}</td>
+            <td class="px-6 py-4 text-right">
+                <a href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline edit-btn"
+                    data-id="{{ $produk->id }}"
+                    data-nama="{{ $produk->nama }}"
+                    data-kategori="{{ $produk->kategori }}"
+                    data-harga="{{ $produk->harga }}" 
+                    data-deskripsi="{{ $produk->deskripsi }}"
+                    data-foto="{{ $produk->foto }}"
+                    data-modal-target="editProdukModal"
+                    data-modal-toggle="editProdukModal">
+                    Edit
+                </a>
+                <br>
+                <a href="#"
+                    class="font-medium text-red-600 dark:text-red-500 hover:underline delete-btn"
+                    data-id="{{ $produk->id }}"
+                    data-nama="{{ $produk->nama }}"
+                    data-modal-target="hapusProdukModal"
+                    data-modal-toggle="hapusProdukModal">
+                    Hapus
+                </a>
+            </td>
+        </tr>
+    @endforeach
+</tbody>
     </table>
 
     @include('components.editproduk_modal')
@@ -75,6 +78,7 @@
                 document.getElementById('edit-nama').value = this.dataset.nama;
                 document.getElementById('edit-kategori').value = this.dataset.kategori;
                 document.getElementById('edit-deskripsi').value = this.dataset.deskripsi;
+                document.getElementById('edit-harga').value = this.dataset.harga;
                 document.getElementById('formEditProduk').action = `/product/${this.dataset.id}`;
             });
         });
@@ -98,9 +102,17 @@
                 document.getElementById('hapusProdukModal').classList.add('hidden');
             });
         }
+
+        document.querySelectorAll('.delete-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const id = this.dataset.id;
+                const nama = this.dataset.nama;
+                const form = document.getElementById('formHapusProduk');
+                form.action = `/product/${id}`;
+                document.getElementById('confirm-nama').innerText = nama;
+                document.getElementById('hapusProdukModal').classList.remove('hidden');
+            });
+        });
+
     });
-<<<<<<< HEAD
 </script>
-=======
-</script>
->>>>>>> ec47a4b19af5a5bcf832c8daaf41dfc1bfb85c5e

@@ -1,11 +1,12 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 <nav style="background-color: #C2AE0E;" class="border-gray-200">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
         
         <!-- KIRI: Logo -->
         <a href="/landing" class="flex items-center space-x-3">
-            <img src="image/logo.png" class="h-8" alt="Logo" />
+           <img src="{{ asset('image/logo.png') }}" class="h-8" alt="Logo" />
         </a>
-
+ 
         <!-- TENGAH: Mega Menu -->
         <div id="mega-menu" class="hidden md:flex space-x-8 justify-center">
             <a href="/landing" class="text-blue-600 hover:text-blue-800 font-medium">Home</a>
@@ -13,7 +14,8 @@
             <div class="relative group">
                 <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown"
                     class="text-gray-900 hover:text-blue-600 font-medium flex items-center">
-                    Menu
+                    <a href="/menu">
+                    Menu</a>
                     <svg class="w-2.5 h-2.5 ms-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m1 1 4 4 4-4" />
@@ -69,3 +71,6 @@
         </div>
     </div>
 </nav>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
