@@ -45,3 +45,29 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const editButtons = document.querySelectorAll('.edit-btn');
+
+    editButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const id = this.dataset.id;
+            const nama = this.dataset.nama;
+            const kategori = this.dataset.kategori;
+            const deskripsi = this.dataset.deskripsi;
+
+            document.getElementById('edit-id').value = id;
+            document.getElementById('edit-nama').value = nama;
+            document.getElementById('edit-kategori').value = kategori;
+            document.getElementById('edit-deskripsi').value = deskripsi;
+
+            // Set action form
+            document.getElementById('formEditProduk').action = `/product/${id}`;
+        });
+    });
+});
+</script>
+=======
+>>>>>>> 030d18702a722bde15b72192b0c66bdde2ad4506
