@@ -10,5 +10,5 @@ class Produk extends Model
     use HasFactory;
 
     // Nama tabel jika tidak sesuai dengan plural form dari nama model
-    protected $fillable = ['nama', 'deskripsi', 'kategori', 'foto'];
+    protected $fillable = ['nama', 'deskripsi', 'kategori','harga', 'foto'];
 }

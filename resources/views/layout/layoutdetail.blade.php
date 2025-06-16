@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style/flowbite.min.css">
     <link rel="icon" href="image/logo-web.png" type="image/x-icon">
     <script src="style/flowbite.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
 </head>
 <body class="bg-white-100 text-gray-800 font-sans">
 <!-- Navbar -->
@@ -17,7 +19,7 @@
 <main class=" bg-white-300">
         <div class="max-w-5xl mx-auto p-4 pb-8 md:pb-12 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white mb-4">
         <!-- Gambar Produk -->
-        <img src="/image/martabak1.jpg" alt="" class="w-full h-full object-cover rounded-lg mt-4">
+        <img src="{{ asset('uploads/' . $produk->foto) }}" alt="{{ $produk->nama }}" class="w-full h-full object-cover rounded-lg mt-4">
         <!-- Detail Produk -->
             <div class="space-y-6 mt-6">
                 <div >
@@ -38,4 +40,7 @@
         @include('components.footer')
 </main>
 </body>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
 </html>

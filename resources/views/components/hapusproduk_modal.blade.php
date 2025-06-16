@@ -11,7 +11,8 @@
                 @method('DELETE')
                 <input type="hidden" name="id" id="hapus-id">
                 <div class="flex justify-center gap-2">
-                    <button type="button" 
+                    <button type="button"
+                            id="cancelDelete" 
                             class="bg-gray-300 text-gray-800 py-2 px-4 rounded hover:bg-gray-400"
                             data-modal-toggle="hapusProdukModal">
                         Batal
@@ -25,3 +26,20 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.querySelectorAll('.delete-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        const id = this.dataset.id;
+        const nama = this.dataset.nama;
+        const form = document.getElementById('formHapusProduk');
+        form.action = `/product/${id}`;
+        document.getElementById('confirm-nama').innerText = nama;
+        document.getElementById('hapusProdukModal').classList.remove('hidden');
+    });
+    document.getElementById('cancelDelete').addEventListener('click', function () {
+    document.getElementById('hapusProdukModal').classList.add('hidden');
+});
+});
+
+</script>

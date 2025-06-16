@@ -15,9 +15,12 @@
                 </div>
 
                 <div class="mb-4">
-                    <label for="edit-kategori" class="block text-sm font-medium text-gray-700">Kategori</label>
-                    <input type="text" name="kategori" id="edit-kategori"
-                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" required>
+                    <label for="kategori" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kategori</label>
+                    <select id="edit-kategori" name="kategori" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5">
+                        <option value="Martabak Manis">Martabak Manis</option>
+                        <option value="Martabak Telor">Martabak Telor</option>
+                        <!-- Tambah kategori lain sesuai kebutuhan -->
+                    </select>
                 </div>
 
                 <div class="mb-4">
@@ -25,7 +28,11 @@
                     <textarea name="deskripsi" id="edit-deskripsi"
                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" required></textarea>
                 </div>
-
+                <div class="mb-4">
+    <label for="harga" class="block text-sm font-medium text-gray-700">Harga</label>
+    <input type="number" name="harga" id="edit-harga" required
+           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50">
+</div>
                 <div class="mb-4">
                     <label for="edit-foto" class="block text-sm font-medium text-gray-700">Foto Produk (opsional)</label>
                     <input type="file" name="foto" id="edit-foto"
@@ -38,6 +45,7 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -61,3 +69,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+=======
+>>>>>>> 030d18702a722bde15b72192b0c66bdde2ad4506

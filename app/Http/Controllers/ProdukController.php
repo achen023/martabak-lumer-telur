@@ -46,4 +46,11 @@ class ProdukController extends Controller
         $produk->delete();
         return redirect()->back()->with('success', 'Produk berhasil dihapus.');
     }
+
+    public function show($id)
+{
+    $produk = Produk::findOrFail($id); // cari produk berdasarkan ID
+    return view('pages.detail', compact('produk')); // pastikan viewnya benar
+}
+
 }

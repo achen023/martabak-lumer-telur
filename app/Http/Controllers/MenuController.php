@@ -7,8 +7,9 @@ use illuminate\View\View;
 
 class MenuController extends Controller
 {
-    function show() {
-
-        return view('pages.menu');
+      public function show()
+    {
+        $produks = \App\Models\Produk::all();
+        return view('pages.menu', compact('produks'));
     }
 }
