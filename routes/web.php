@@ -21,7 +21,8 @@ Route::get('/', [LandingController::class, 'landing']);
 
 Route::get('/home', [HomeController::class, 'show']);
 Route::get('/landing', [LandingController::class, 'landing'])->name('landing');
-Route::get('/menu', [MenuController::class, 'show']);
+Route::get('/menu', [MenuController::class, 'show'])->name('menu');
+Route::get('/menu/{kategori}', [MenuController::class, 'filterByKategori'])->name('menu.kategori');
 Route::get('/about', [AboutController::class, 'show']);
 Route::get('/detail', [DetailController::class, 'show']);
 

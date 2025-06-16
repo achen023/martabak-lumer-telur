@@ -6,33 +6,30 @@
         <a href="/landing" class="flex items-center space-x-3">
            <img src="{{ asset('image/logo.png') }}" class="h-8" alt="Logo" />
         </a>
- 
+        
         <!-- TENGAH: Mega Menu -->
-        <div id="mega-menu" class="hidden md:flex space-x-8 justify-center">
-            <a href="/landing" class="text-blue-600 hover:text-blue-800 font-medium">Home</a>
+        <div id="mega-menu" class="hidden md:flex justify-center gap-x-8">
+            <a href="/landing"
+            class="{{ request()->is('landing') ? 'text-blue-600' : 'text-gray-900' }} hover:text-blue-800 font-medium">
+                Home
+            </a>
 
             <div class="relative group">
-                <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown"
-                    class="text-gray-900 hover:text-blue-600 font-medium flex items-center">
-                    <a href="/menu">
-                    Menu</a>
-                    <svg class="w-2.5 h-2.5 ms-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m1 1 4 4 4-4" />
-                    </svg>
-                </button>
-                <!-- Dropdown isi menu -->
-                <div id="mega-menu-dropdown"
-                    class="absolute z-10 hidden mt-2 w-40 bg-white border border-gray-100 rounded-lg shadow-md dark:bg-gray-700 group-hover:block">
-                    <ul class="p-2 text-sm text-gray-700 dark:text-white">
-                        <li><a href="/menu" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Martabak Manis</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Martabak Telur</a></li>
-                    </ul>
-                </div>
+                <a href="/menu"
+                class="{{ request()->is('menu') ? 'text-blue-600' : 'text-gray-900' }} hover:text-blue-800 font-medium">
+                    Menu
+                </a>
             </div>
 
-            <a href="/about" class="text-gray-900 hover:text-blue-600 font-medium">About</a>
-            <a href="/contact" class="text-gray-900 hover:text-blue-600 font-medium">Contact</a>
+            <a href="/about"
+            class="{{ request()->is('about') ? 'text-blue-600' : 'text-gray-900' }} hover:text-blue-800 font-medium">
+                About
+            </a>
+
+            <a href="/contact"
+            class="{{ request()->is('contact') ? 'text-blue-600' : 'text-gray-900' }} hover:text-blue-800 font-medium">
+                Contact
+            </a>
         </div>
 
         <!-- KANAN: Username/Login/Register -->

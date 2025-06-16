@@ -45,7 +45,6 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -69,5 +68,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-=======
->>>>>>> 030d18702a722bde15b72192b0c66bdde2ad4506
+

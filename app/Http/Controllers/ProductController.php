@@ -15,13 +15,14 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-    $request->validate([
-        'nama' => 'required',
-        'deskripsi' => 'required',
-        'kategori' => 'required',
-        'harga' => 'required|numeric', // tambahkan validasi harga
-        'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-    ]);
+        $request->validate([
+            'nama' => 'required',
+            'deskripsi' => 'required',
+            'kategori' => 'required',
+            'harga' => 'required|numeric', // tambahkan validasi harga
+            'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+        dd($request->all());
 
     $file = $request->file('foto');
     $filename = time() . '.' . $file->getClientOriginalExtension();

@@ -9,6 +9,7 @@
     <link rel="icon" href="image/logo-web.png" type="image/x-icon">
     <script src="style/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+
     
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -30,5 +31,6 @@
 
 <!-- Footer -->
     @include('components.footer')
+<script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
 </body>
 </html>
