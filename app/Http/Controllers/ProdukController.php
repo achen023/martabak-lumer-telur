@@ -88,6 +88,26 @@ public function menu(Request $request)
 
     return view('pages.menu', compact('produks'));
 }
+public function show($id)
+{
+    $produk = Produk::find($id);
+
+    if (!$produk) {
+        abort(404, 'Produk tidak ditemukan');
+    }
+
+    return view('pages.detail', compact('produk'));
+}
+public function showDetail()
+{
+    $imgsrc1 = 'image/martabak1.jpg';
+    $imgsrc2 = 'image/martabak_coklatkeju.jpg';
+    $imgsrc3 = 'image/martabaktelur (2).jpg';
+    $imgsrc4 = 'image/martabak mage.jpg';
+    $imgsrc5 = 'images/slide5.jpg';
+
+    return view('components.carousel', compact('imgsrc1', 'imgsrc2', 'imgsrc3', 'imgsrc4', 'imgsrc5'));
+}
 
 
 

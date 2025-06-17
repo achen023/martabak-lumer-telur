@@ -10,6 +10,22 @@
     <script src="style/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
+<style>
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fadeInDown {
+        animation: fadeInDown 1s ease-out;
+    }
+</style>
     
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -33,4 +49,20 @@
     @include('components.footer')
 <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
 </body>
+<script>
+    const btn = document.getElementById('dropdownUserBtn');
+    const menu = document.getElementById('dropdownUserMenu');
+
+    document.addEventListener('click', function (e) {
+        if (btn.contains(e.target)) {
+            // Klik tombol -> toggle menu
+            menu.classList.toggle('hidden');
+        } else {
+            // Klik di luar -> sembunyikan
+            if (!menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+            }
+        }
+    });
+</script>
 </html>

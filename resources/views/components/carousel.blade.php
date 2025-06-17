@@ -1,33 +1,40 @@
+@php
+    $images = [$imgsrc1, $imgsrc2, $imgsrc3, $imgsrc4, $imgsrc5];
+@endphp
+
+
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
-    <div class="relative h-56 sm:h-72 md:h-96 lg:h-[500px] overflow-hidden rounded-lg">
-        <!-- Item 1 -->
-        <div class="duration-700 ease-in-out" data-carousel-item="active">
-            <img src="{{ $imgsrc1 }}" class="w-full h-full object-cover" alt="Slide 1">
-        </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="{{ $imgsrc2 }}" class="w-full h-full object-cover" alt="Slide 2">
-        </div>
-        <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="{{ $imgsrc3 }}" class="w-full h-full object-cover" alt="Slide 3">
-        </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="{{ $imgsrc4 }}" class="w-full h-full object-cover" alt="Slide 4">
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="{{ $imgsrc5 }}" class="w-full h-full object-cover" alt="Slide 5">
-        </div>
+    <div class="relative h-[300px] sm:h-[350px] md:h-[450px] lg:h-[600px] xl:h-[710px] overflow-hidden rounded-lg">
+
+        @foreach ($images as $index => $img)
+            <div class="{{ $index === 0 ? '' : 'hidden' }} duration-700 ease-in-out relative" data-carousel-item="{{ $index === 0 ? 'active' : '' }}">
+                <!-- Gambar -->
+                <img src="{{ asset($img) }}" class="w-full h-full object-cover" alt="Slide {{ $index + 1 }}">
+
+                <!-- Overlay Teks pada Slide Pertama -->
+                @if ($index === 0)
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/30">
+                        <h2 class="text-white text-2xl sm:text-3xl md:text-5xl font-bold animate-fadeInDown text-center px-4">
+                            Selamat datang di website kami
+                        </h2>
+                    </div>
+                @endif
+            </div>
+        @endforeach
+
     </div>
 
     <!-- Slider indicators -->
     <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        @for ($i = 0; $i < 5; $i++)
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="{{ $i === 0 ? 'true' : 'false' }}" aria-label="Slide {{ $i + 1 }}" data-carousel-slide-to="{{ $i }}"></button>
-        @endfor
+        @foreach ($images as $index => $img)
+            <button type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="{{ $index === 0 ? 'true' : 'false' }}"
+                aria-label="Slide {{ $index + 1 }}"
+                data-carousel-slide-to="{{ $index }}">
+            </button>
+        @endforeach
     </div>
 
     <!-- Slider controls -->
