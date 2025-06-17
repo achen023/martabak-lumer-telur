@@ -20,7 +20,7 @@ class ProdukController extends Controller
             'deskripsi' => 'required',
             'kategori' => 'required',
             'harga' => 'required|numeric', // tambahkan validasi harga
-            'foto' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'foto' => 'required|image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
     $file = $request->file('foto');
