@@ -106,7 +106,7 @@ public function showDetail()
     $imgsrc4 = 'image/martabak mage.jpg';
     $imgsrc5 = 'images/slide5.jpg';
 
-    return view('components.carousel', compact('imgsrc1', 'imgsrc2', 'imgsrc3', 'imgsrc4', 'imgsrc5'));
+    return view('pages.landing', compact('imgsrc1', 'imgsrc2', 'imgsrc3', 'imgsrc4', 'imgsrc5'));
 }
 
 

@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="style/flowbite.min.css">
     <link rel="icon" href="image/logo-web.png" type="image/x-icon">
     <script src="style/flowbite.min.js"></script>
+    
 </head>
 <body class="bg-yellow-500 min-h-screen flex">
     
     <!-- Tombol kembali -->
-    <a href="{{ url('/') }}" class="absolute top-4 left-4 px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition shadow">
-        ⬅ Back
+    <a href="{{ url('/') }}" class="absolute top-4 left-8 px-8 py-2 bg-gray-800 text-white rounded-lg hover:bg-black transition shadow">
+        Back
     </a>
+
 
     {{-- Side Branding --}}
     <div class="w-1/2 bg-yellow-500 flex flex-col items-center justify-center p-8 text-center">
