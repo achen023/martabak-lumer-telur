@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: martabak-lumer
+    env: docker
+    plan: free
+    branch: main
+    rootDir: .
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: DB_CONNECTION
+        value: mysql
