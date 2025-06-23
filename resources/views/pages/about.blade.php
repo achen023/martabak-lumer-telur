@@ -31,7 +31,7 @@
                 <h2 class="mb-6 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black">
                     Quality is our
                 </h2>
-                <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-black-400">
+                <p class="mb-6 text-lg font-normal text-white-500 lg:text-xl dark:text-white-400">
                 Kami percaya bahwa kualitas adalah kunci utama dalam setiap produk yang kami sajikan. Dari pemilihan bahan baku terbaik hingga proses pembuatan yang higienis dan penuh ketelitian, kami selalu memastikan bahwa setiap martabak yang Anda nikmati memiliki rasa dan standar terbaik. Karena bagi kami, kepuasan pelanggan dimulai dari kualitas yang tidak pernah dikompromikan.
                 </p>
             </div>

@@ -9,26 +9,26 @@
       <div class="bg-white p-8 rounded-lg shadow text-center">
         <img src="/image/like.png" alt="Harga Terjangkau" class="mx-auto mb-4 mt-4 w-16 h-16">
         <h3 class="text-red-500 font-semibold text-lg mb-4">Harga Terjangkau</h3>
-        <p class="text-gray-600 text-sm mb-6">Martabak premium mulai dari Rp19.000</p>
+        <p class="text-gray-600 text-sm mb-6">Martabak premium mulai dari Rp25.000</p>
       </div>
 
       <!-- Card 2 -->
       <div class="bg-white p-8 rounded-lg shadow text-center">
         <img src="/image/service.png" alt="Pelayanan Cepat dan Ramah" class="mx-auto mb-4 mt-4 w-16 h-16">
-        <h3 class="text-red-500 font-semibold text-lg mb-4">Pelayanan Cepat dan Ramah</h3>
+        <h3 class="text-red-500 font-semibold text-lg mb-4">Cepat dan Ramah</h3>
         <p class="text-gray-600 text-sm mb-6">Bisa pesan dulu tanpa antri</p>
       </div>
 
       <!-- Card 3 -->
       <div class="bg-white p-8 rounded-lg shadow text-center">
-        <img src="https://img.icons8.com/emoji/96/pizza.png" alt="Rasa Yang Enak" class="mx-auto mb-4 mt-4 w-16 h-16">
+        <img src="/image/enak.png" alt="Rasa Yang Enak" class="mx-auto mb-4 mt-4 w-16 h-16">
         <h3 class="text-red-500 font-semibold text-lg mb-4">Rasa Yang Enak</h3>
         <p class="text-gray-600 text-sm mb-6">Nggak percaya? Cobain deh</p>
       </div>
 
       <!-- Card 4 -->
       <div class="bg-white p-6 rounded-lg shadow text-center">
-        <img src="https://img.icons8.com/emoji/96/alarm-clock.png" alt="Buka lebih Cepat" class="mx-auto mb-4 mt-4 w-16 h-16">
+        <img src="/image/time.png" alt="Buka lebih Cepat" class="mx-auto mb-4 mt-4 w-16 h-16">
         <h3 class="text-red-500 font-semibold text-lg mb-4">Buka lebih Cepat</h3>
         <p class="text-gray-600 text-sm mb-6">Buka setiap hari, jam 13.00 - 22.00 WIB</p>
       </div>

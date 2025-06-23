@@ -19,7 +19,7 @@
   </div>
 
   <div class="flex justify-center my-10">
-    <a href="https://wa.me/nomor_kamu" class="flex items-center gap-x-2 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md">
+    <a href="https://wa.me/62895600550241" target="_blank" class="flex items-center gap-x-2 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md">
       <img src="/image/wa.png" alt="WhatsApp" class="w-8 h-8" />
       hubungi kami
     </a>
@@ -35,7 +35,7 @@
     <div class="flex flex-col items-center">
       <div class="text-3xl mb-2"><img src="/image/location_on.png" alt=""></div>
       <p class="font-semibold">Address:</p>
-      <p class="text-gray-600 text-center">Jl. Contoh Batu Besar MTC, Batam, Indonesia</p>
+      <p class="text-gray-600 text-center">Jl.Batu Besar MTC, Batam, Indonesia</p>
     </div>
     <div class="flex flex-col items-center">
       <div class="text-3xl mb-2"><img src="/image/mail.png" alt=""></div>

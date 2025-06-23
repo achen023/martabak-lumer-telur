@@ -7,9 +7,9 @@
 
             @include('components.carousel', [
                 'imgsrc1' => 'image/martabak1.jpg',
-                'imgsrc2' => 'image/martabak_coklatkeju.jpg',
-                'imgsrc3' => 'image/martabaktelur (2).jpg',
-                'imgsrc4' => 'image/martabak mage.jpg',
+                'imgsrc2' => 'image/banner1.png',
+                'imgsrc3' => 'image/martabaktelur2.jpg',
+                'imgsrc4' => 'image/martabak_mage.jpg',
                 'imgsrc5' => 'image/martabak7.jpg',
                 
             ])
@@ -51,10 +51,10 @@
                 <div class="flex flex-col lg:flex-row items-center lg:items-start gap-6">
                     <!-- Text first (on the left) -->
                     <div class="flex-1">
-                        <h2 class="mb-6 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black">
+                        <h2 class="mb-6 text-4xl font-bold leading-none text-center tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black">
                             Quality is our
                         </h2>
-                        <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-black-400">
+                        <p class="mb-6 text-lg font-normal text-black-500 lg:text-xl dark:text-black-400">
                         Kami percaya bahwa kualitas adalah kunci utama dalam setiap produk yang kami sajikan. Dari pemilihan bahan baku terbaik hingga proses pembuatan yang higienis dan penuh ketelitian, kami selalu memastikan bahwa setiap martabak yang Anda nikmati memiliki rasa dan standar terbaik. Karena bagi kami, kepuasan pelanggan dimulai dari kualitas yang tidak pernah dikompromikan.
                         </p>
                     </div>
