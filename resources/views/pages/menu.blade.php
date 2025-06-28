@@ -44,7 +44,7 @@
                 <img src="{{ asset('uploads/' . $item->foto) }}" alt="{{ $item->nama }}"
                     class="w-full h-48 object-cover rounded-t-lg" />
                 
-                <div class="p-5">
+                <div class="p-4">
                     <h2 class="text-2xl font-bold mb-1 text-gray-900 dark:text-black">{{ $item->nama }}</h2>
 
                     <!-- Ganti deskripsi dengan kategori -->

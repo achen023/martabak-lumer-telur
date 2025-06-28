@@ -80,7 +80,7 @@
            Login
         </a>
         <a href="/register"
-           class="px-5 py-1 font-semibold bg-yellow-500 text-white rounded-md shadow-md
+           class="px-4 py-1 font-semibold bg-yellow-500 text-white rounded-md shadow-md
                   hover:bg-yellow-600 transition duration-300 ease-in-out">
            Sign up
         </a>

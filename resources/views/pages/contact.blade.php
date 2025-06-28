@@ -1,5 +1,5 @@
 @extends('layout.layoutlanding')
-
+@section('title', 'contact')
 @section('content')
 <!-- Main Content -->
 <section class="py-8 px-4 bg-white text-center">
@@ -7,7 +7,7 @@
 
   <div class="w-full max-w-4xl mx-auto mb-8">
     <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63312.39728658732!2d110.3893948!3d-7.801194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57964e63e325%3A0x8c5393b9a5390a8d!2sJava%20Java%20Borna!5e0!3m2!1sen!2sid!4v1656484482213!5m2!1sen!2sid"
+      src="https://www.google.com/maps?q=1.1375755745746552,104.11250718872274&z=17&output=embed" 
       width="100%" 
       height="300" 
       style="border:0;" 
@@ -16,6 +16,7 @@
       referrerpolicy="no-referrer-when-downgrade"
       class="rounded-lg shadow-md">
     </iframe>
+
   </div>
 
   <div class="flex justify-center my-10">
