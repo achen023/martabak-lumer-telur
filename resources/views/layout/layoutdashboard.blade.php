@@ -20,3 +20,25 @@
    </div>
 </div>
 </body>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('dropdownUserBtn');
+        const menu = document.getElementById('dropdownUserMenu');
+
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation(); // supaya tidak langsung tertutup
+            menu.classList.toggle('hidden');
+        });
+
+        // Tutup dropdown jika klik di luar
+        document.addEventListener('click', function (e) {
+            if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    });
+</script>
+
+</html>

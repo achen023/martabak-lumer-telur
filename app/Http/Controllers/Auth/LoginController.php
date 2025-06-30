@@ -28,7 +28,7 @@ class LoginController extends Controller
         ];
 
         if(Auth::attempt($data)) {
-            return redirect()->route('landing');
+            return redirect()->route('product.index');
         }else{
             return redirect()->route('login')->with('failed', 'email atau password salah');
         }

@@ -37,16 +37,19 @@ Route::post('/logout',[LoginController::class, 'logout'])->name('logout');
 
 Route::middleware('auth.admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'show'])->name('dashboard');
+    Route::get('/user', [UserController::class, 'show']);
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'show'])->name('dashboard');
     Route::resource('/product', ProductController::class);
     Route::get('/product', [ProductController::class, 'index'])->name('product.index');
     Route::put('/product/{id}', [ProductController::class, 'update'])->name('product.update');
-    Route::get('/user', [UserController::class, 'show']);
+    Route::resource('/produk', ProdukController::class);
+    Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
+    Route::get('/detail/{id}', [ProdukController::class, 'show'])->name('produk.detail');
 });
 
 Route::get('/admin', [AdminController::class, 'admin_login'])->name('admin');
 Route::post('/admin-proses', [AdminController::class, 'admin_proses'])->name('admin-proses');
 Route::post('/admin-logout', [AdminController::class, 'admin_logout'])->name('admin-logout');
-
-Route::resource('/produk', ProdukController::class);
-Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
-Route::get('/detail/{id}', [ProdukController::class, 'show'])->name('produk.detail');

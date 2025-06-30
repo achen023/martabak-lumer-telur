@@ -1,7 +1,16 @@
 <div class="relative overflow-x-auto">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-            User
+            Staff
+        <div class="mb-6 flex justify-end">
+                <a href="register">
+                <button 
+                    class="block text-white bg-yellow-400 hover:bg-yellow-500 font-bold rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer"
+                    type="button">
+                    Registrasi staff
+                </button>
+                </a>
+            </div>
         </caption>
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>

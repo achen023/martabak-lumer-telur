@@ -74,7 +74,7 @@
 </div>
 
     @else
-        <a href="/login"
+        <!--<a href="/login"
            class="px-4 py-1 font-semibold text-black rounded-md
                   hover:bg-yellow-500 hover:text-white transition duration-300 ease-in-out">
            Login
@@ -83,7 +83,7 @@
            class="px-4 py-1 font-semibold bg-yellow-500 text-white rounded-md shadow-md
                   hover:bg-yellow-600 transition duration-300 ease-in-out">
            Sign up
-        </a>
+        </a> -->
     @endauth
 </div>
 
