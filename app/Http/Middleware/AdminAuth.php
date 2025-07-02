@@ -10,7 +10,8 @@ class AdminAuth
     public function handle($request, Closure $next)
     {
         if (!Auth::guard('admin')->check()) {
-            return redirect()->route('admin')->with('failed', 'Silakan login sebagai admin.');
+            // Menampilkan halaman dengan alert, tanpa redirect
+            return response()->view('errors.forbidden', [], 403);
         }
 
         return $next($request);
