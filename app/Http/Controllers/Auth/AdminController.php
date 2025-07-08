@@ -18,11 +18,6 @@ class AdminController extends Controller
             'password' => 'required',
         ]);
 
-        $data = [
-            'username' => $request->username,
-            'password' => $request->password
-        ];
-
        $credentials = $request->only('username', 'password');
 
         if (Auth::guard('admin')->attempt($credentials)) {
