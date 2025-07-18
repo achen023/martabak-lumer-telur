@@ -1,62 +1,96 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://github.com/user-attachments/assets/5a4303a6-9929-4dc4-8554-925bd625ccd4" width="500" height="250" alt="Martabak Lumer Telur Logo"/>
 </p>
 
-link BAST
-## About Laravel
+<h1 align="center"><strong>CMS Website For Martabak Lumer Telur</strong></h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+</p>
+                                                                                        
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📄Project Best Learning Kelompok 2
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+| NIM         | Nama Lengkap                                | Role                      | Posisi         |
+|-------------|----------------------------------------------|---------------------------|----------------|
+| 3312411023  | Achen irwan saputera                         |Frontend and Backend       | Ketua Grup     |
+| 3312411029  | Fedian baihaqi                               | Frontend and Backend      | Anggota Grup   |
+| 3312411021  | Aldi alpedo siagian                          | Frontend and Backend      | Anggota Grup   |
+| 3312411030  | Setya pramudiya hakim                        | Frontend and Backend      | Anggota Grup   |
 
-## Learning Laravel
+### 🔧 Fitur yang Tersedia
+- dashboard
+- menu
+- about us
+- contact
+- location
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 📦 Manajemen Produk
+- Daftar produk
+- Detail produk
+- kategori produk
+- CRUD produk untuk admin
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🧑‍💼 Manajemen Admin
+- Dashboard admin
+- Manajemen user & produk
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🧭 Navigasi & UI
+- Navbar responsif (desktop & mobile)
+- Dropdown menu profil
+- Tombol WhatsApp langsung ke admin
+- Footer dengan informasi kontak
+### 📄 Halaman
+- Home
+- Products
+- About
+- Location
+- Profile
+- Admin Dashboard
 
-## Laravel Sponsors
+### 📱 Responsivitas
+- Tampilan mobile-friendly
+- Menu mobile
+- Layout yang responsif
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🔗 Integrasi
+- WhatsApp API
+- Google Maps untuk lokasi toko
 
-### Premium Partners
+### 🎨 Styling & UI/UX
+- Desain modern dengan Tailwind CSS
+- Animasi & transisi
+- Font Awesome icons
+- Google Fonts (Poppins & Pacifico)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+### 🔒 Keamanan
+- Middleware untuk autentikasi & admin
+- CSRF protection
+- Validasi form
 
-## Contributing
+### 🗄️ Database
+- MySQL / MariaDB
+- Eloquent ORM (Laravel)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🛠️ Teknologi yang Digunakan
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+| Kategori              | Teknologi                                                                 |
+|-----------------------|---------------------------------------------------------------------------|
+| **Backend**           | PHP (Laravel Framework), MySQL/MariaDB                                    |
+| **Frontend**          | HTML, CSS (Tailwind CSS), JavaScript, Blade Template                      |
+| **Styling & UI**      | Tailwind CSS, Font Awesome, Google Fonts (Poppins, Pacifico)              |
+| **Dependency Tools**  | Composer (PHP), npm (Node.js modules)                                     |
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🚀 Catatan Pengembangan
+Proyek ini masih dalam tahap pengembangan dan akan terus ditingkatkan dari sisi fungsionalitas dan user experience.  
+**Stay tuned for more updates!** 🌸
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📌 Lisensi
+> Proyek ini dibuat **untuk tujuan pembelajaran** dalam kegiatan Project Based Learning dan **bukan untuk penggunaan komersial**.  
+> Semua hak cipta milik **Kelompok 2 – Informatika 2A Malam, Polibatam**.
